@@ -1,0 +1,120 @@
+/* Container and overall spacing */
+.body-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Description (full width, on top) */
+.description {
+  margin-bottom: 20px;
+  background: transparent;
+}
+
+/* Two-column layout: experience left, skills+projects right stacked */
+.main-columns {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+/* Left column (experience) */
+.left-col {
+  flex: 1;
+  min-width: 280px;
+}
+
+/* Right column (skills + projects) */
+.right-col {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Generic boxed container used for skills and project list wrapper
+   Make outer boxes slightly translucent instead of full white so the page
+   background shows through. */
+.box {
+  background: rgba(255, 255, 255, 0.03); /* subtle translucent light */
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45); /* darker shadow for contrast on dark bg */
+}
+
+/* Style headings inside boxes */
+.left-col h1,
+.right-col h1 {
+  margin: 0 0 12px 0;
+  font-size: 1.2rem;
+}
+
+/* Each experience should be displayed as its own card/box */
+/* Make individual experience cards slightly lighter than the outer box so they stand out */
+.experience-list .single-experience,
+.experience-list > * { /* fallback if Experience component has different markup */
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  padding: 12px;
+  margin-bottom: 12px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.45);
+}
+
+/* Projects: each project card */
+.projects-list .single-project,
+.projects-list > * {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  padding: 12px;
+  margin-bottom: 12px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.45);
+}
+
+/* Skills container holds all skills in one box; style list items inside */
+/* Keep the skills box translucent and render individual skill "chips" with a light tint */
+.skills-list ul,
+.skills-list div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Individual skill chips (if Skill component renders inline elements) */
+.skills-list .single-skill,
+.skills-list li,
+.skills-list span {
+  background: rgba(255, 255, 255, 0.06);
+  color: inherit;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+}
+
+/* Reduce large inner white areas if components render wrapper divs */
+.experience-list,
+.projects-list,
+.skills-list {
+  background: transparent;
+  padding: 0;
+  margin: 0;
+}
+
+/* Responsive: stack columns on narrow screens */
+@media (max-width: 800px) {
+  .main-columns {
+    flex-direction: column;
+  }
+
+  .right-col {
+    width: 100%;
+  }
+
+  .left-col {
+    width: 100%;
+  }
+}

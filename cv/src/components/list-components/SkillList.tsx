@@ -4,7 +4,7 @@ import Skill from "../single-components/Skill";
 function SkillList() {
   return (
     <>
-      <div className="all-skills">
+      <div>
         <Skill title="Team-work" level="Master" />
         <Skill title="Java-development" level="Expert" />
         <Skill title="Web-development" level="Advanced" />

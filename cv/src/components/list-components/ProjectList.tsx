@@ -4,7 +4,7 @@ import Project from "../single-components/Project";
 function ProjectList() {
   return (
     <>
-      <div className="all-projects">
+      <div>
         <Project
           title="Ystäväkirja (Friendbook)"
           skills="HTML, CSS, JS, Node.js"

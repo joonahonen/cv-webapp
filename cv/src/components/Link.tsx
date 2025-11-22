@@ -1,6 +1,8 @@
+
+// Link component: helps making links in other components
 type Props = {
   href?: string;
-  children: React.ReactNode;
+  children?: React.ReactNode;
   disappear?: boolean;
 };
 
