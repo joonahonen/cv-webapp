@@ -1,11 +1,46 @@
+import Project from "../single-components/Project";
 
 // ProjectList component used for gathering individual projects
-function ProjectList(){
-    return(
-        <>
-        
-        </>
-    );
+function ProjectList() {
+  return (
+    <>
+      <div className="all-projects">
+        <Project
+          title="Ystäväkirja (Friendbook)"
+          skills="HTML, CSS, JS, Node.js"
+          description="Website created to help orientate first year students. 
+          Consists of frontend, backend and database. 
+          Collects user given information and displays it on the website. 
+          Member of ITEE-faculty at the University of Oulu has shown interest in the project, and it could be published in the future! 
+          Currently not published."
+          link="https://github.com/joonahonen/Ystavakirja_2025"
+        />
+        <Project
+          title="CV-webapp"
+          skills="React, TypeScript, Components"
+          description="This Curriculum Vitae-webapp! Created to show realworld proficiency in React, web development and TypeScript. 
+          Also ment to highlight skills and experience, like a regular CV. 
+          Currently not published."
+          link="https://github.com/joonahonen/cv-webapp"
+        />
+        <Project
+          title="Weatherapp"
+          skills="Java, Teamwork, API"
+          description="Course-project made using Java. 
+          Weatherapp is a desktop application that gets real-time weather information using and API-service! 
+          The app was made my myself and another student. It is outdated, but shows real world knowledge of Java programming skills."
+          link="https://github.com/joonahonen/o4_saasovellus"
+        />
+        <Project
+          title="Sudoku18 mobile game (coming soon...)"
+          skills="React, PWA, Mobile-development"
+          description="An unfinished PWA mobile application. 
+          Sudoku18 is a fun drinking oriented Sudoku-game, that can be played by multiple people at the same time. 
+          Currently still being created. Information will be updated, when the project is finished!"
+        />
+      </div>
+    </>
+  );
 }
 
-export default ProjectList
+export default ProjectList;

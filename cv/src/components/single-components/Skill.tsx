@@ -9,9 +9,9 @@ type Props = {
 function Skill({ title, level }: Props) {
   return (
     <>
-      <p>
-        {title}: {level}
-      </p>
+      <div className="single-skill">
+        <h3>{title}: {level}</h3>
+      </div>
     </>
   );
 }

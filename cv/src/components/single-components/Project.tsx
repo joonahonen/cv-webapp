@@ -1,16 +1,24 @@
 // Project component for CV
 // Used to define a single project, all projects gathered in ProjectList
 
+import Link from "../Link";
+
 type Props = {
   title: string;
+  skills: string;
   description: string;
+  link?: string;
 };
 
-function Project({ title, description }: Props) {
+function Project({ title, skills, description, link }: Props) {
   return (
     <>
-      <h1>{title}</h1>
-      <p>{description}</p>
+      <div className="single-project">
+        <h2>{title}</h2>
+        <h3>Developed skills: {skills}</h3>
+        <p>{description}</p>
+        <Link href={link} children="Go to project"/>
+      </div>
     </>
   );
 }

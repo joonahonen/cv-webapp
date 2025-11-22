@@ -1,0 +1,12 @@
+type Props = {
+  href?: string;
+  children: React.ReactNode;
+  disappear?: boolean;
+};
+
+function Link({ href, children, disappear }: Props) {
+  if (!href && disappear) return null;
+  return <a href={href}>{children}</a>;
+}
+
+export default Link;

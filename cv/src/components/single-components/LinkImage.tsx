@@ -1,3 +1,5 @@
+import Link from "../Link";
+
 // LinkImage component used in profile to create a small image that has a link
 type Props = {
   imageLink: string;
@@ -6,14 +8,17 @@ type Props = {
 };
 
 function LinkImage({ imageLink, link, alt }: Props) {
-  return(
-  <>
-    <a href={link}>
-      <div className="link-image">
-        <img src={imageLink} alt={alt}></img>
-      </div>
-    </a>
-  </>
+  return (
+    <>
+      <Link
+        href={link}
+        children={
+          <div className="link-image">
+            <img src={imageLink} alt={alt}></img>
+          </div>
+        }
+      />
+    </>
   );
 }
 

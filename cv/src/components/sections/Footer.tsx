@@ -1,3 +1,5 @@
+import Link from "../Link";
+
 // Footer component: Footer of the website
 function Footer() {
   return (
@@ -5,18 +7,16 @@ function Footer() {
       <div>
         <h2>Contact me</h2>
         <p>
-          Email:
+          Email: joona.ahonen68@gmail.com
           <br />
-          LinkedIn:
+          LinkedIn: <Link href="https://www.linkedin.com/in/joona-ahonen-b9239a38b/" children="Joona Ahonen"></Link>
           <br />
 
         </p>
       </div>
       <div>
         <p>© 2025 Joona Otso Ahonen</p>
-        <a href="https://github.com/joonahonen/cv-webapp">
-          Website Source Code
-        </a>
+        <Link href="https://github.com/joonahonen/cv-webapp" children="Website Source Code"/>
       </div>
     </>
   );
