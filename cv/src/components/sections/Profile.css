@@ -1,8 +1,59 @@
+/* Circular avatar, shadow for "cutout" style */
 .profile-image {
-  width: 170px;          /* adjust to taste (e.g., 80px, 96px, 120px) */
+  width: 170px;
   height: 170px;
   object-fit: cover;
   border-radius: 50%;
   display: block;
-  margin: 0 auto 8px;
+  margin: 0 auto 18px auto;
+  background: #224054;
+  box-shadow: 0 2px 18px rgba(20, 51, 80, 0.32);
+  border: 2px solid #256585;
+}
+
+/* Name: large, bold, white text */
+h1 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #f2f5fa;
+  margin: 0.2em 0 0 0;
+}
+
+/* Subtitle: muted, smaller and below name */
+h3 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #b7cadb;
+  margin: 0.4em 0 1.5em 0;
+}
+
+/* Social icon row: center, circles, spacing */
+.link-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  margin: 2em auto 0 auto;
+}
+
+.link-list a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(34, 64, 84, 0.95);
+  color: #b7cadb;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  box-shadow: 0 2px 13px rgba(20, 51, 80, 0.13);
+  font-size: 1.75em;
+  transition: background 0.22s, color 0.22s;
+  border: 1px solid #346085;
+}
+
+.link-list a:hover {
+  background: #2b4f68;
+  color: #65dfff;
+  /* accent on hover */
+  border: 1.5px solid #65dfff;
 }

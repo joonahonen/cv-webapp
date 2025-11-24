@@ -1,120 +1,144 @@
 /* Container and overall spacing */
 .body-container {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 24px 0 32px 0;
   box-sizing: border-box;
 }
 
 /* Description (full width, on top) */
 .description {
-  margin-bottom: 20px;
-  background: transparent;
+  margin-bottom: 36px;
+  background: rgba(22, 42, 62, 0.36);
+  /* dark blue tint */
+  border: 1.5px solid #254665;
+  border-radius: 14px;
+  padding: 28px 36px;
+  color: #f2f5fa;
+  box-shadow: 0 6px 24px rgba(16, 31, 48, 0.20);
+  text-align: left;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* Two-column layout: experience left, skills+projects right stacked */
+/* Main columns: side by side */
 .main-columns {
   display: flex;
-  gap: 24px;
+  gap: 32px;
   align-items: flex-start;
 }
 
 /* Left column (experience) */
 .left-col {
-  flex: 1;
-  min-width: 280px;
+  flex: 1.1;
+  min-width: 320px;
 }
 
 /* Right column (skills + projects) */
 .right-col {
   flex: 1;
-  min-width: 280px;
+  min-width: 320px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 32px;
 }
 
-/* Generic boxed container used for skills and project list wrapper
-   Make outer boxes slightly translucent instead of full white so the page
-   background shows through. */
-.box {
-  background: rgba(255, 255, 255, 0.03); /* subtle translucent light */
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 8px;
-  padding: 16px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45); /* darker shadow for contrast on dark bg */
-}
-
-/* Style headings inside boxes */
+/* Headings: big, bold, white, left-aligned */
 .left-col h1,
 .right-col h1 {
-  margin: 0 0 12px 0;
-  font-size: 1.2rem;
+  margin: 0 0 22px 0;
+  font-size: 2rem;
+  color: #f2f5fa;
+  font-weight: 700;
+  text-align: left;
 }
 
-/* Each experience should be displayed as its own card/box */
-/* Make individual experience cards slightly lighter than the outer box so they stand out */
+/* Experience card style */
 .experience-list .single-experience,
-.experience-list > * { /* fallback if Experience component has different markup */
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 6px;
-  padding: 12px;
-  margin-bottom: 12px;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.45);
+.experience-list>* {
+  background: rgba(18, 38, 58, 0.85);
+  /* slightly lighter for card pop */
+  border: 1.5px solid #274b65;
+  border-radius: 11px;
+  padding: 18px 22px;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 12px rgba(10, 25, 40, 0.20);
+  color: #f2f5fa;
+  text-align: left;
+  transition: box-shadow 0.18s;
 }
 
-/* Projects: each project card */
+/* Remove ANY weird lines/borders from last card */
+.experience-list .single-experience:last-child,
+.experience-list>*:last-child {
+  margin-bottom: 0;
+  box-shadow: 0 3px 12px rgba(10, 25, 40, 0.10);
+  border-bottom: 1.5px solid #274b65;
+}
+
+/* Projects box style: same as experience */
 .projects-list .single-project,
-.projects-list > * {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 6px;
-  padding: 12px;
-  margin-bottom: 12px;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.45);
+.projects-list>* {
+  background: rgba(18, 38, 58, 0.85);
+  border: 1.5px solid #274b65;
+  border-radius: 11px;
+  padding: 18px 22px;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 12px rgba(10, 25, 40, 0.20);
+  color: #f2f5fa;
+  text-align: left;
+  transition: box-shadow 0.18s;
 }
 
-/* Skills container holds all skills in one box; style list items inside */
-/* Keep the skills box translucent and render individual skill "chips" with a light tint */
+/* Remove bottom line from last project */
+.projects-list .single-project:last-child,
+.projects-list>*:last-child {
+  margin-bottom: 0;
+  box-shadow: 0 3px 12px rgba(10, 25, 40, 0.10);
+  border-bottom: 1.5px solid #274b65;
+}
+
+/* Boxed skills container style */
+.skills.box {
+  background: rgba(34, 64, 84, 0.74);
+  border: 1.5px solid #274b65;
+  border-radius: 11px;
+  padding: 22px 22px;
+  box-shadow: 0 3px 12px rgba(10, 25, 40, 0.20);
+}
+
+/* Skills listing: chips wrap and spacing */
 .skills-list ul,
 .skills-list div {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 13px;
 }
 
-/* Individual skill chips (if Skill component renders inline elements) */
 .skills-list .single-skill,
 .skills-list li,
 .skills-list span {
-  background: rgba(255, 255, 255, 0.06);
-  color: inherit;
-  padding: 6px 10px;
+  background: rgba(22, 42, 62, 0.75);
+  color: #d7ecff;
+  padding: 9px 18px;
   border-radius: 999px;
-  font-size: 0.9rem;
-}
-
-/* Reduce large inner white areas if components render wrapper divs */
-.experience-list,
-.projects-list,
-.skills-list {
-  background: transparent;
-  padding: 0;
-  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  border: none;
 }
 
 /* Responsive: stack columns on narrow screens */
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .main-columns {
     flex-direction: column;
+    gap: 24px;
   }
 
-  .right-col {
-    width: 100%;
-  }
-
+  .right-col,
   .left-col {
     width: 100%;
+    min-width: 0;
   }
 }

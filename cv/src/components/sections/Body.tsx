@@ -10,7 +10,7 @@ function Body() {
       <div className="description">
         <h2>Hi!</h2>
         <p>
-          I am Joona Ahonen from Oulu, Finland!
+          <b>I am Joona Ahonen from Oulu, Finland!</b>
           <br />I love coding, cybersecurity and UI design. I am an outgoing and
           joyful person, that loves learning new things. On this CV website, you
           can find information about my skills, experience and projects! 

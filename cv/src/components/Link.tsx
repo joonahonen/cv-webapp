@@ -7,7 +7,7 @@ type Props = {
 };
 
 function Link({ href, children, disappear }: Props) {
-  if (!href && disappear) return null;
+  if (!href) return null;
   return <a href={href}>{children}</a>;
 }
 
