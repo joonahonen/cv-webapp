@@ -1,0 +1,22 @@
+.footer-div {
+  width: 100%;
+  /* background: #181818; */
+  color: #fff;
+  padding: 24px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.contact-me {
+  text-align: left;
+}
+
+.source-code {
+  text-align: right;
+}
+
+.contact-info div {
+  margin-bottom: 4px;
+}

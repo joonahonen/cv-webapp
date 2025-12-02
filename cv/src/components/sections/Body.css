@@ -1,155 +1,207 @@
 /* === BODY OUTER CONTAINER === */
-.body-container {                          /* Main wrapper for the entire Body section               */
-    max-width: 1200px;                     /* Prevents the layout from stretching too wide           */
-    margin: 0 auto;                        /* Centers the section horizontally                       */
-    padding: 20px;                         /* Adds space inside the container                        */
-    display: flex;                         /* Places description beside the main columns             */
-    flex-direction: column;                /* Stacks description above the columns                   */
-    gap: 30px;                             /* Space between the description and the columns          */
+.body-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
 /* === DESCRIPTION SECTION === */
-.description {                             /* Intro text section ("Hi! I am Joona...")               */
-    background-color: #3e3e3e;             /* Clean white background                                 */
-    padding: 20px;                         /* Adds inner spacing for readability                     */
-    border-radius: 8px;                    /* Soft rounded corners                                   */
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* Subtle shadow for a card-like look                     */
+.description {
+  background-color: #3e3e3e;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-.description-box{
-    background-color: #2f2f2f;
-    border-radius: 8px;
-    gap: 20px;
-    text-align: left;
-    padding: 20px;
+.description-box {
+  background-color: #2f2f2f;
+  border-radius: 4px;
+  gap: 20px;
+  text-align: left;
+  padding: 20px;
+}
+
+/* === EDUCATION === */
+.education {
+  margin-top: 1px;
+  background-color: #3e3e3e;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.education-list {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  justify-content: stretch;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0;
+}
+
+.single-education {
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: none;
+  background-color: #2f2f2f;
+  border-radius: 4px;
+  text-align: left;
+}
+
+.single-education h2,
+h3 {
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 /* === MAIN COLUMN WRAPPER === */
-.main-columns {                            /* Container for left and right columns                   */
-    display: flex;                         /* Aligns columns side-by-side                           */
-    gap: 20px;                             /* Space between left & right columns                     */
+.main-columns {
+  display: flex;
+  gap: 20px;
 }
 
 /* === LEFT COLUMN === */
-.left-col {                                /* Contains the EXPERIENCE section                       */
-    flex: 1;                                /* Allows the column to grow equally                      */
-    display: flex;                         /* Allows stacking content vertically                     */
-    flex-direction: column;                /* Stacks skills above projects                           */
-    gap: 20px;
+.left-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.experience {                              /* Wrapper for the experience content                     */
-    background-color: #3e3e3e;            /* White card background                                  */
-    padding: 20px;                         /* Inner spacing                                          */
-    border-radius: 8px;                    /* Rounded corners                                        */
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* Subtle shadow                                          */
+.experience {
+  background-color: #3e3e3e;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* === EXPERIENCE === */
 .experience-list {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
-.single-experience{
-    background-color: #2f2f2f;
-    border-radius: 8px;
-    gap: 20px;
-    text-align: left;
+.single-experience {
+  background-color: #2f2f2f;
+  border-radius: 4px;
+  gap: 20px;
+  text-align: left;
 }
 
-.exp-desc{
-    padding-bottom: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
+.exp-desc {
+  /* padding-bottom: 20px; */
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
-.exp-date{
-    padding-top: 20px;
-    padding-left: 20px;
+.exp-date {
+  padding-top: 20px;
+  padding-left: 20px;
 }
 
-.exp-pos, .exp-place{
-    padding-left: 20px;
+.exp-pos,
+.exp-place {
+  padding-left: 20px;
+}
+
+.exp-link {
+  padding-left: 20px;
+  padding-bottom: 20px;
 }
 
 /* === RIGHT COLUMN === */
-.right-col {                               /* Contains SKILLS + PROJECTS sections                   */
-    flex: 1;                                /* Same width behavior as left column                     */
-    display: flex;                         /* Allows stacking content vertically                     */
-    flex-direction: column;                /* Stacks skills above projects                           */
-    gap: 20px;                             /* Adds space between sections                            */
+.right-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 /* === SKILLS SECTION === */
-.skills.box {                              /* Skills card container                                  */
-    background-color: #3e3e3e;            /* Match other sections                                   */
-    padding: 20px;                         /* Inner spacing                                          */
-    border-radius: 8px;                    /* Rounded corners                                        */
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* Subtle card shadow                                     */
+.skills.box {
+  background-color: #3e3e3e;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-.skills-list {                             /* Wrapper for SkillList component                        */
-    margin-top: 10px;                      /* Space between heading and content                      */
+.skills-list {
+  margin-top: 10px;
 }
 
-.single-skill{
-    background-color: #2f2f2f;
-    border-radius: 8px;
-    gap: 20px;
-    text-align: left;
+.single-skill {
+  background-color: #2f2f2f;
+  border-radius: 4px;
+  gap: 20px;
+  text-align: left;
 }
 
-.skill-desc{
-    padding: 20px;
+.skill-desc {
+  padding: 20px;
 }
 
 /* === PROJECTS SECTION === */
-.projects-list {                            /* Wrapper for ProjectList component                      */
-    background-color: #3e3e3e;            /* White background card                                  */
-    padding: 20px;                          /* Inner spacing                                          */
-    border-radius: 8px;                     /* Rounded corners                                        */
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);  /* Light shadow                                           */
-    margin-top: 10px;                       /* Space between title and card                           */
+.projects-list {
+  background-color: #3e3e3e;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
 }
 
-.single-project{
-    background-color: #2f2f2f;
-    border-radius: 8px;
-    gap: 20px;
-    text-align: left;
+.single-project {
+  background-color: #2f2f2f;
+  border-radius: 4px;
+  gap: 20px;
+  text-align: left;
+  position: relative;
+  padding-right: 20px;
 }
 
-.single-project h2{
-    padding-top: 20px;
-    padding-left: 20px;
+.project-icon {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  pointer-events: none;
 }
 
-.single-project h3, p{
-    padding-left: 20px;
+.single-project h2 {
+  padding-top: 20px;
+  padding-left: 20px;
 }
 
-.project-link{
-    padding-left: 20px;
-    padding-bottom: 20px;
+.single-project h3,
+p {
+  padding-left: 20px;
+}
+
+.project-link {
+  padding-left: 20px;
+  padding-bottom: 20px;
 }
 
 /* === SHARED HEADERS === */
 .left-col h1,
-.right-col h1 {                             /* Common styling for section titles                      */
-    font-size: 1.6rem;                      /* Medium-large headers                                   */
-    margin-bottom: 10px;                    /* Space below the title                                  */
-    color: #ffffff;                             /* Dark gray for readability                              */
+.right-col h1 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  color: #ffffff;
 }
 
 /* === RESPONSIVE DESIGN === */
 @media (max-width: 768px) {
+  .main-columns {
+    flex-direction: column;
+  }
 
-    .main-columns {                         /* Adjusts layout on smaller screens                      */
-        flex-direction: column;             /* Columns stack vertically                               */
-    }
-
-    .left-col,
-    .right-col {
-        width: 100%;                        /* Full width for both columns                            */
-    }
+  .left-col,
+  .right-col {
+    width: 100%;
+  }
 }

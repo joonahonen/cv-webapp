@@ -3,8 +3,8 @@ import github from "../../assets/github-mark.png";
 import linkedIn from "../../assets/InBug-Black.png";
 import discord from "../../assets/Discord-Symbol-Black.png";
 import instagram from "../../assets/Instagram_Glyph_Black.png";
-import steam from "../../assets/Steam_icon_logo.png";
-import email from "../../assets/gmail.png";
+import steam from "../../assets/steamlogoblack.png";
+
 import "./LinkList.css";
 
 // LinkList component: used in Profile, to gather links to different platforms
@@ -12,14 +12,33 @@ import "./LinkList.css";
 function LinkList() {
   return (
     <>
-    <div className="link-list">
-      <LinkImage imageLink={github} link="https://github.com/joonahonen" alt="GitHub" />
-      <LinkImage imageLink={linkedIn} link="https://www.linkedin.com/in/joona-ahonen-b9239a38b/" alt="LinkedIn" />
-      <LinkImage imageLink={discord} link="temp" alt="Discord" />
-      <LinkImage imageLink={instagram} link="temp" alt="Instagram" />
-      <LinkImage imageLink={steam} link="temp" alt="Steam" />
-      <LinkImage imageLink={email} link="temp" alt="Email" />
-    </div>
+      <div className="link-list">
+        <LinkImage
+          imageLink={github}
+          link="https://github.com/joonahonen"
+          alt="GitHub"
+        />
+        <LinkImage
+          imageLink={linkedIn}
+          link="https://www.linkedin.com/in/joona-ahonen-b9239a38b/"
+          alt="LinkedIn"
+        />
+        <LinkImage
+          imageLink={discord}
+          link="https://discord.com/users/341936364352176128"
+          alt="Discord"
+        />
+        <LinkImage
+          imageLink={instagram}
+          link="https://www.instagram.com/joonahonen_"
+          alt="Instagram"
+        />
+        <LinkImage
+          imageLink={steam}
+          link="https://steamcommunity.com/id/jO2na1/"
+          alt="Steam"
+        />
+      </div>
     </>
   );
 }

@@ -1,4 +1,6 @@
+import EducationList from "../list-components/EducationList";
 import ExperienceList from "../list-components/ExperienceList";
+import OtherExperienceList from "../list-components/OtherExperienceList";
 import ProjectList from "../list-components/ProjectList";
 import SkillList from "../list-components/SkillList";
 import "./Body.css";
@@ -8,7 +10,6 @@ function Body() {
   return (
     <div className="body-container">
       <div className="description">
-        
         <div className="description-box">
           <p>
             <h2>Hi!</h2>
@@ -22,12 +23,26 @@ function Body() {
         </div>
       </div>
 
+      <h1>Education</h1>
+      <div className="education">
+        <div className="education-list">
+          <EducationList />
+        </div>
+      </div>
+
       <div className="main-columns">
         <div className="left-col">
           <h1>Work Experience</h1>
           <div className="experience">
             <div className="experience-list">
               <ExperienceList />
+            </div>
+          </div>
+
+          <h1>Other experience</h1>
+          <div className="experience">
+            <div className="experience-list">
+              <OtherExperienceList />
             </div>
           </div>
         </div>

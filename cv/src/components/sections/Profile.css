@@ -1,4 +1,3 @@
-/* Profile avatar and heading */
 .profile-image {
   width: 140px;
   height: 140px;
@@ -11,12 +10,15 @@
   background: var(--skill-bg);
 }
 
-/* Name and subtitle */
+.link-image img[alt="GitHub"] {
+  filter: brightness(0) invert(0);
+}
+
 h1 {
   margin: 8px 0 4px;
   font-size: 28px;
   font-weight: 700;
-  color: #ffffff; 
+  color: #ffffff;
   line-height: 1.1;
 }
 
@@ -24,10 +26,9 @@ h3 {
   margin: 0 0 14px;
   font-size: 14px;
   font-weight: 500;
-  color: #ffffff; 
+  color: #ffffff;
 }
 
-/* Link list (socials) - subtle circular icons */
 .link-list {
   display: flex;
   gap: 12px;
@@ -41,11 +42,13 @@ h3 {
   align-items: center;
   justify-content: center;
   border-radius: 8px;
-  background: var(--panel);
-  border: 1px solid var(--soft-border);
+  background: #222;
+  border: 2px solid #444;
   color: var(--accent);
-  box-shadow: 0 6px 16px var(--shadow);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: background 0.2s, border-color 0.2s;
 }
 .link-list a:hover {
-  background: var(--skill-bg);
+  background: #333;
+  border-color: #646cff;
 }
