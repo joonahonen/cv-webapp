@@ -1,59 +1,51 @@
-/* Circular avatar, shadow for "cutout" style */
+/* Profile avatar and heading */
 .profile-image {
-  width: 170px;
-  height: 170px;
+  width: 140px;
+  height: 140px;
   object-fit: cover;
   border-radius: 50%;
   display: block;
-  margin: 0 auto 18px auto;
-  background: #224054;
-  box-shadow: 0 2px 18px rgba(20, 51, 80, 0.32);
-  border: 2px solid #256585;
+  margin: 0 auto 12px;
+  border: 2px solid var(--soft-border);
+  box-shadow: 0 6px 18px var(--shadow);
+  background: var(--skill-bg);
 }
 
-/* Name: large, bold, white text */
+/* Name and subtitle */
 h1 {
-  font-size: 2.6rem;
+  margin: 8px 0 4px;
+  font-size: 28px;
   font-weight: 700;
-  color: #f2f5fa;
-  margin: 0.2em 0 0 0;
+  color: #ffffff; 
+  line-height: 1.1;
 }
 
-/* Subtitle: muted, smaller and below name */
 h3 {
-  font-size: 1.25rem;
-  font-weight: 400;
-  color: #b7cadb;
-  margin: 0.4em 0 1.5em 0;
+  margin: 0 0 14px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff; 
 }
 
-/* Social icon row: center, circles, spacing */
+/* Link list (socials) - subtle circular icons */
 .link-list {
   display: flex;
+  gap: 12px;
   justify-content: center;
-  align-items: center;
-  gap: 2em;
-  margin: 2em auto 0 auto;
+  margin-top: 10px;
 }
-
 .link-list a {
-  display: flex;
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: rgba(34, 64, 84, 0.95);
-  color: #b7cadb;
-  border-radius: 50%;
-  width: 48px;
-  height: 48px;
-  box-shadow: 0 2px 13px rgba(20, 51, 80, 0.13);
-  font-size: 1.75em;
-  transition: background 0.22s, color 0.22s;
-  border: 1px solid #346085;
+  border-radius: 8px;
+  background: var(--panel);
+  border: 1px solid var(--soft-border);
+  color: var(--accent);
+  box-shadow: 0 6px 16px var(--shadow);
 }
-
 .link-list a:hover {
-  background: #2b4f68;
-  color: #65dfff;
-  /* accent on hover */
-  border: 1.5px solid #65dfff;
+  background: var(--skill-bg);
 }

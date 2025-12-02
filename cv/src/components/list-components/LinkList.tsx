@@ -15,10 +15,10 @@ function LinkList() {
     <div className="link-list">
       <LinkImage imageLink={github} link="https://github.com/joonahonen" alt="GitHub" />
       <LinkImage imageLink={linkedIn} link="https://www.linkedin.com/in/joona-ahonen-b9239a38b/" alt="LinkedIn" />
-      <LinkImage imageLink={discord} link="" alt="Discord" />
-      <LinkImage imageLink={instagram} link="" alt="Instagram" />
-      <LinkImage imageLink={steam} link="" alt="Steam" />
-      <LinkImage imageLink={email} link="" alt="Email" />
+      <LinkImage imageLink={discord} link="temp" alt="Discord" />
+      <LinkImage imageLink={instagram} link="temp" alt="Instagram" />
+      <LinkImage imageLink={steam} link="temp" alt="Steam" />
+      <LinkImage imageLink={email} link="temp" alt="Email" />
     </div>
     </>
   );

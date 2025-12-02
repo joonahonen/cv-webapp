@@ -8,22 +8,26 @@ function Body() {
   return (
     <div className="body-container">
       <div className="description">
-        <h2>Hi!</h2>
-        <p>
-          <b>I am Joona Ahonen from Oulu, Finland!</b>
-          <br />I love coding, cybersecurity and UI design. I am an outgoing and
-          joyful person, that loves learning new things. On this CV website, you
-          can find information about my skills, experience and projects! 
-          I am always up for new challenges and am looking forward to using my skills in realworld projects.
-        </p>
+        
+        <div className="description-box">
+          <p>
+            <h2>Hi!</h2>
+            <b>I am Joona Ahonen from Oulu, Finland!</b>
+            <br />I love coding, cybersecurity and UI design. I am an outgoing
+            and joyful person, that loves learning new things. On this CV
+            website, you can find information about my skills, experience and
+            projects! I am always up for new challenges and am looking forward
+            to using my skills in realworld projects.
+          </p>
+        </div>
       </div>
 
       <div className="main-columns">
         <div className="left-col">
+          <h1>Work Experience</h1>
           <div className="experience">
-            <h1>Work Experience</h1>
             <div className="experience-list">
-              <ExperienceList/>
+              <ExperienceList />
             </div>
           </div>
         </div>
@@ -36,12 +40,10 @@ function Body() {
             </div>
           </div>
 
-          
           <h1>Projects</h1>
           <div className="projects-list">
             <ProjectList />
           </div>
-          
         </div>
       </div>
     </div>

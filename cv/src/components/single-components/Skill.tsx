@@ -10,7 +10,7 @@ function Skill({ title, level }: Props) {
   return (
     <>
       <div className="single-skill">
-        <h3>{title}: {level}</h3>
+        <p className="skill-desc"><b>{title}: {level}</b></p>
       </div>
     </>
   );

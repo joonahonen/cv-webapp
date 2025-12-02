@@ -6,7 +6,7 @@ type Props = {
   disappear?: boolean;
 };
 
-function Link({ href, children, disappear }: Props) {
+function Link({ href, children }: Props) {
   if (!href) return null;
   return <a href={href}>{children}</a>;
 }

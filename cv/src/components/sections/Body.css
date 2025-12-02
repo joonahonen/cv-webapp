@@ -1,144 +1,155 @@
-/* Container and overall spacing */
-.body-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 24px 0 32px 0;
-  box-sizing: border-box;
+/* === BODY OUTER CONTAINER === */
+.body-container {                          /* Main wrapper for the entire Body section               */
+    max-width: 1200px;                     /* Prevents the layout from stretching too wide           */
+    margin: 0 auto;                        /* Centers the section horizontally                       */
+    padding: 20px;                         /* Adds space inside the container                        */
+    display: flex;                         /* Places description beside the main columns             */
+    flex-direction: column;                /* Stacks description above the columns                   */
+    gap: 30px;                             /* Space between the description and the columns          */
 }
 
-/* Description (full width, on top) */
-.description {
-  margin-bottom: 36px;
-  background: rgba(22, 42, 62, 0.36);
-  /* dark blue tint */
-  border: 1.5px solid #254665;
-  border-radius: 14px;
-  padding: 28px 36px;
-  color: #f2f5fa;
-  box-shadow: 0 6px 24px rgba(16, 31, 48, 0.20);
-  text-align: left;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
+/* === DESCRIPTION SECTION === */
+.description {                             /* Intro text section ("Hi! I am Joona...")               */
+    background-color: #3e3e3e;             /* Clean white background                                 */
+    padding: 20px;                         /* Adds inner spacing for readability                     */
+    border-radius: 8px;                    /* Soft rounded corners                                   */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* Subtle shadow for a card-like look                     */
 }
 
-/* Main columns: side by side */
-.main-columns {
-  display: flex;
-  gap: 32px;
-  align-items: flex-start;
+.description-box{
+    background-color: #2f2f2f;
+    border-radius: 8px;
+    gap: 20px;
+    text-align: left;
+    padding: 20px;
 }
 
-/* Left column (experience) */
-.left-col {
-  flex: 1.1;
-  min-width: 320px;
+/* === MAIN COLUMN WRAPPER === */
+.main-columns {                            /* Container for left and right columns                   */
+    display: flex;                         /* Aligns columns side-by-side                           */
+    gap: 20px;                             /* Space between left & right columns                     */
 }
 
-/* Right column (skills + projects) */
-.right-col {
-  flex: 1;
-  min-width: 320px;
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
+/* === LEFT COLUMN === */
+.left-col {                                /* Contains the EXPERIENCE section                       */
+    flex: 1;                                /* Allows the column to grow equally                      */
+    display: flex;                         /* Allows stacking content vertically                     */
+    flex-direction: column;                /* Stacks skills above projects                           */
+    gap: 20px;
 }
 
-/* Headings: big, bold, white, left-aligned */
+.experience {                              /* Wrapper for the experience content                     */
+    background-color: #3e3e3e;            /* White card background                                  */
+    padding: 20px;                         /* Inner spacing                                          */
+    border-radius: 8px;                    /* Rounded corners                                        */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* Subtle shadow                                          */
+}
+
+/* === EXPERIENCE === */
+.experience-list {
+    margin-top: 10px;
+}
+
+.single-experience{
+    background-color: #2f2f2f;
+    border-radius: 8px;
+    gap: 20px;
+    text-align: left;
+}
+
+.exp-desc{
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.exp-date{
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+.exp-pos, .exp-place{
+    padding-left: 20px;
+}
+
+/* === RIGHT COLUMN === */
+.right-col {                               /* Contains SKILLS + PROJECTS sections                   */
+    flex: 1;                                /* Same width behavior as left column                     */
+    display: flex;                         /* Allows stacking content vertically                     */
+    flex-direction: column;                /* Stacks skills above projects                           */
+    gap: 20px;                             /* Adds space between sections                            */
+}
+
+/* === SKILLS SECTION === */
+.skills.box {                              /* Skills card container                                  */
+    background-color: #3e3e3e;            /* Match other sections                                   */
+    padding: 20px;                         /* Inner spacing                                          */
+    border-radius: 8px;                    /* Rounded corners                                        */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* Subtle card shadow                                     */
+}
+
+.skills-list {                             /* Wrapper for SkillList component                        */
+    margin-top: 10px;                      /* Space between heading and content                      */
+}
+
+.single-skill{
+    background-color: #2f2f2f;
+    border-radius: 8px;
+    gap: 20px;
+    text-align: left;
+}
+
+.skill-desc{
+    padding: 20px;
+}
+
+/* === PROJECTS SECTION === */
+.projects-list {                            /* Wrapper for ProjectList component                      */
+    background-color: #3e3e3e;            /* White background card                                  */
+    padding: 20px;                          /* Inner spacing                                          */
+    border-radius: 8px;                     /* Rounded corners                                        */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);  /* Light shadow                                           */
+    margin-top: 10px;                       /* Space between title and card                           */
+}
+
+.single-project{
+    background-color: #2f2f2f;
+    border-radius: 8px;
+    gap: 20px;
+    text-align: left;
+}
+
+.single-project h2{
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+.single-project h3, p{
+    padding-left: 20px;
+}
+
+.project-link{
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+/* === SHARED HEADERS === */
 .left-col h1,
-.right-col h1 {
-  margin: 0 0 22px 0;
-  font-size: 2rem;
-  color: #f2f5fa;
-  font-weight: 700;
-  text-align: left;
+.right-col h1 {                             /* Common styling for section titles                      */
+    font-size: 1.6rem;                      /* Medium-large headers                                   */
+    margin-bottom: 10px;                    /* Space below the title                                  */
+    color: #ffffff;                             /* Dark gray for readability                              */
 }
 
-/* Experience card style */
-.experience-list .single-experience,
-.experience-list>* {
-  background: rgba(18, 38, 58, 0.85);
-  /* slightly lighter for card pop */
-  border: 1.5px solid #274b65;
-  border-radius: 11px;
-  padding: 18px 22px;
-  margin-bottom: 20px;
-  box-shadow: 0 3px 12px rgba(10, 25, 40, 0.20);
-  color: #f2f5fa;
-  text-align: left;
-  transition: box-shadow 0.18s;
-}
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 768px) {
 
-/* Remove ANY weird lines/borders from last card */
-.experience-list .single-experience:last-child,
-.experience-list>*:last-child {
-  margin-bottom: 0;
-  box-shadow: 0 3px 12px rgba(10, 25, 40, 0.10);
-  border-bottom: 1.5px solid #274b65;
-}
+    .main-columns {                         /* Adjusts layout on smaller screens                      */
+        flex-direction: column;             /* Columns stack vertically                               */
+    }
 
-/* Projects box style: same as experience */
-.projects-list .single-project,
-.projects-list>* {
-  background: rgba(18, 38, 58, 0.85);
-  border: 1.5px solid #274b65;
-  border-radius: 11px;
-  padding: 18px 22px;
-  margin-bottom: 20px;
-  box-shadow: 0 3px 12px rgba(10, 25, 40, 0.20);
-  color: #f2f5fa;
-  text-align: left;
-  transition: box-shadow 0.18s;
-}
-
-/* Remove bottom line from last project */
-.projects-list .single-project:last-child,
-.projects-list>*:last-child {
-  margin-bottom: 0;
-  box-shadow: 0 3px 12px rgba(10, 25, 40, 0.10);
-  border-bottom: 1.5px solid #274b65;
-}
-
-/* Boxed skills container style */
-.skills.box {
-  background: rgba(34, 64, 84, 0.74);
-  border: 1.5px solid #274b65;
-  border-radius: 11px;
-  padding: 22px 22px;
-  box-shadow: 0 3px 12px rgba(10, 25, 40, 0.20);
-}
-
-/* Skills listing: chips wrap and spacing */
-.skills-list ul,
-.skills-list div {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 13px;
-}
-
-.skills-list .single-skill,
-.skills-list li,
-.skills-list span {
-  background: rgba(22, 42, 62, 0.75);
-  color: #d7ecff;
-  padding: 9px 18px;
-  border-radius: 999px;
-  font-size: 1.05rem;
-  font-weight: 500;
-  letter-spacing: 0.01em;
-  border: none;
-}
-
-/* Responsive: stack columns on narrow screens */
-@media (max-width: 900px) {
-  .main-columns {
-    flex-direction: column;
-    gap: 24px;
-  }
-
-  .right-col,
-  .left-col {
-    width: 100%;
-    min-width: 0;
-  }
+    .left-col,
+    .right-col {
+        width: 100%;                        /* Full width for both columns                            */
+    }
 }

@@ -10,10 +10,10 @@ function Experience({ workPlace, position, date, description }: Props) {
   return (
     <>
       <div className="single-experience">
-        <p>{date}</p>
-        <h2>{position}</h2>
-        <h4>{workPlace}</h4>
-        <p>{description}</p>
+        <p className="exp-date">{date}</p>
+        <h2 className="exp-pos">{position}</h2>
+        <h4 className="exp-place">{workPlace}</h4>
+        <p className="exp-desc">{description}</p>
       </div>
     </>
   );

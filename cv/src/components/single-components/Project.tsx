@@ -17,7 +17,7 @@ function Project({ title, skills, description, link }: Props) {
         <h2>{title}</h2>
         <h3>Developed skills: {skills}</h3>
         <p>{description}</p>
-        <Link href={link} children="Go to project"/>
+        <div className="project-link"><Link href={link} children="Go to project"/></div>
       </div>
     </>
   );
