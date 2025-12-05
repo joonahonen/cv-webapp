@@ -38,10 +38,10 @@ function ProjectList() {
           iconSrc={weather}
         />
         <Project
-          title="Sudoku18 mobile game"
+          title="Sudoku drinking game"
           skills="React, PWA, Mobile-development"
           description="An unfinished PWA mobile application. 
-          Sudoku18 is a fun drinking oriented Sudoku-game, that can be played by multiple people at the same time. 
+          A fun drinking oriented Sudoku-game, that can be played by multiple people at the same time. 
           Currently still being created. Information will be updated, when the project is finished!"
           iconSrc={phone}
         />
