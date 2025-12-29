@@ -204,4 +204,8 @@ p {
   .right-col {
     width: 100%;
   }
+
+  .education-list {
+    flex-direction: column;
+  }
 }
