@@ -2,13 +2,27 @@ import Project from "../single-components/Project";
 import book from "../../assets/open-book.png";
 import resume from "../../assets/resume.png";
 import weather from "../../assets/cloudy-day.png";
-import phone from "../../assets/smartphone.png";
+import ai from "../../assets/artificial-intelligence-2.png";
 
 // ProjectList component used for gathering individual projects
 function ProjectList() {
   return (
     <>
       <div>
+        <Project
+          title="Bachelor's project: Intelligent Knowledge Assistant"
+          skills="Python, AI, LLMs, Teamwork"
+          description="My Bachelor's project, where me and my team built an AI powered Intelligent Knowledge Assistant using open-source LLMs, RAG and vector databases. The AI application also has a web interface, created using React."
+          link="https://github.com/JPK-fin/Intelligent-Knowledge-Assistant"
+          iconSrc={ai}
+        />
+        <Project
+          title="Bachelor's thesis"
+          skills="Cybersecurity, Academic writing, Research"
+          description="My Bachelor's thesis (written in Finnish), about social engineering in an organisational environment. My thesis goes over social engineering tactics, risks and management"
+          link="https://urn.fi/URN:NBN:fi:oulu-202605113135"
+          iconSrc={book}
+        />
         <Project
           title="Ystäväkirja (Friendbook)"
           skills="HTML, CSS, JS, Node.js"
@@ -36,14 +50,6 @@ function ProjectList() {
           The app was made my myself and another student. It is outdated, but shows real world knowledge of Java programming skills."
           link="https://github.com/joonahonen/o4_saasovellus"
           iconSrc={weather}
-        />
-        <Project
-          title="Sudoku drinking game"
-          skills="React, PWA, Mobile-development"
-          description="An unfinished PWA mobile application. 
-          A fun drinking oriented Sudoku-game, that can be played by multiple people at the same time. 
-          Currently still being created. Information will be updated, when the project is finished!"
-          iconSrc={phone}
         />
       </div>
     </>

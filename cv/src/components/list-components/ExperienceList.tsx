@@ -7,6 +7,13 @@ function ExperienceList() {
     <>
       <div>
         <Experience
+          workPlace="Nuvoo.com"
+          position="Computer Salesperson"
+          date="04/2026 - Present"
+          description="Computer salesperson for Nuvoo.com, in Oulu.
+          My job consists of selling computers to customers, providing customer service and IT-support. The job has helped me develop excellent sales and IT-support skills."
+        />
+        <Experience
           workPlace="Martela"
           position="Moving Worker"
           date="05/2025 - 09/2025"

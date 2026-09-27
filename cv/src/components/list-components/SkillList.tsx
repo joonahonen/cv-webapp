@@ -6,12 +6,12 @@ function SkillList() {
     <>
       <div>
         <Skill title="Team-work" level="Master" />
+        <Skill title="Sales" level="Expert" />
         <Skill title="Java-development" level="Expert" />
-        <Skill title="Web-development" level="Advanced" />
+        <Skill title="Python" level="Advanced" />
         <Skill title="React" level="Advanced" />
         <Skill title="Node.js" level="Advanced" />
         <Skill title="Figma" level="Advanced" />
-        <Skill title="Cybersecurity" level="Intermediate" />
       </div>
     </>
   );
