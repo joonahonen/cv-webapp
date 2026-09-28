@@ -14,7 +14,7 @@ function Body() {
           <p>
             <h2>Hi!</h2>
             <b>I am Joona Ahonen from Oulu, Finland!</b>
-            <br />I love coding, cybersecurity and UI design. I am an outgoing
+            <br />I love coding, cybersecurity, data and AI. I am an outgoing
             and joyful person, that loves learning new things. On this CV
             website, you can find information about my skills, experience and
             projects! I am always up for new challenges and am looking forward

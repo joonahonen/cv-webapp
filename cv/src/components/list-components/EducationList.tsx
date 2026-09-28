@@ -4,7 +4,7 @@ function EducationList() {
   return (
     <>
     <Education
-        date="2026 - 2028"
+        date="2026 - Present"
         degree="Master of Science: Computer Science"
         school="University of Oulu"
         description="MSc in Computer Science, graduating in 2028."
